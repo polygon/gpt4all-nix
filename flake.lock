@@ -1,43 +1,64 @@
 {
   "nodes": {
-    "gpt4all-chat": {
-      "flake": false,
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1683465609,
-        "narHash": "sha256-+FnySE2i92rDOndoyCeb1IVpyqQSIn4srlwXgZJWbd8=",
-        "ref": "refs/heads/master",
-        "rev": "9bd5609ba0fd19e8445a2ae816c494e7a01baaa1",
-        "revCount": 321,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/nomic-ai/gpt4all-chat"
+        "lastModified": 1683458821,
+        "narHash": "sha256-fBAUiZ0XGoYy9sBud+rR2T18yIeRzb9aVkGBkOjzFwc=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f3e943c249229affaaabd302e1cc14c769eef9d8",
+        "type": "github"
       },
       "original": {
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/nomic-ai/gpt4all-chat"
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1683408522,
-        "narHash": "sha256-9kcPh6Uxo17a3kK3XCHhcWiV1Yu1kYj22RHiymUhMkU=",
+        "lastModified": 1683442750,
+        "narHash": "sha256-IiJ0WWW6OcCrVFl1ijE+gTaP0ChFfV6dNkJR05yStmw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "897876e4c484f1e8f92009fd11b7d988a121a4e7",
+        "rev": "eb751d65225ec53de9cf3d88acbf08d275882389",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "gpt4all-chat": "gpt4all-chat",
-        "nixpkgs": "nixpkgs"
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs",
+        "src": "src"
+      }
+    },
+    "src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1683484802,
+        "narHash": "sha256-l3+vti0IJ8G1EX/YHEfyGlupCDdu+FPDOMr/VDSzRho=",
+        "ref": "refs/heads/master",
+        "rev": "7b66cb711999a1c3e9437d92f81536dc34c16d36",
+        "revCount": 322,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/nomic-ai/gpt4all-chat"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/nomic-ai/gpt4all-chat"
       }
     }
   },
