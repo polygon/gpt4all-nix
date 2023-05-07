@@ -19,5 +19,10 @@
       gpt4all-chat = pkgs.qt6Packages.callPackage ./gpt4all-chat.nix { src=gpt4all-chat; };
       default = self.packages.${system}.gpt4all-chat;
     };
+
+    apps.${system}.default = {
+      type = "app";
+      program = "${self.packages.${system}.gpt4all-chat}/bin/chat";
+    };
   };
 }
