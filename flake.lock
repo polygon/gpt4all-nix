@@ -1,21 +1,21 @@
 {
   "nodes": {
-    "gpt4all-chat": {
+    "gpt4all": {
       "flake": false,
       "locked": {
-        "lastModified": 1683465609,
-        "narHash": "sha256-+FnySE2i92rDOndoyCeb1IVpyqQSIn4srlwXgZJWbd8=",
-        "ref": "refs/heads/master",
-        "rev": "9bd5609ba0fd19e8445a2ae816c494e7a01baaa1",
-        "revCount": 321,
+        "lastModified": 1684003426,
+        "narHash": "sha256-KAP76KV+m2kQdUlo3O2pdkiIUNmwO7NDjMGDCDXpjh0=",
+        "ref": "refs/heads/main",
+        "rev": "0f71cb6759f648ad210d2b4bdd56d5b3e94b8d37",
+        "revCount": 698,
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/nomic-ai/gpt4all-chat"
+        "url": "https://github.com/nomic-ai/gpt4all"
       },
       "original": {
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/nomic-ai/gpt4all-chat"
+        "url": "https://github.com/nomic-ai/gpt4all"
       }
     },
     "nixpkgs": {
@@ -36,7 +36,7 @@
     },
     "root": {
       "inputs": {
-        "gpt4all-chat": "gpt4all-chat",
+        "gpt4all": "gpt4all",
         "nixpkgs": "nixpkgs"
       }
     }

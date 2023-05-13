@@ -23,7 +23,6 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     wrapQtAppsHook
     cmake
-    qmake
   ];
 
   buildInputs = [
@@ -31,6 +30,7 @@ stdenv.mkDerivation {
     qtsvg
   ];
 
+  setSourceRoot = "sourceRoot=`pwd`/source/gpt4all-chat";
 
   meta = with lib; {
     description = "Gpt4all-j chat";
