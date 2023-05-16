@@ -7,6 +7,7 @@
 , qtquicktimeline
 , qtsvg
 , wrapQtAppsHook
+, withAvx2 ? true
 }:
 
 stdenv.mkDerivation {
@@ -29,6 +30,8 @@ stdenv.mkDerivation {
     qtquicktimeline
     qtsvg
   ];
+
+  cmakeFlags = if withAvx2 then [] else [ "-DGPT4ALL_AVX_ONLY=ON" ];
 
   setSourceRoot = "sourceRoot=`pwd`/source/gpt4all-chat";
 

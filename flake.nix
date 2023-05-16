@@ -17,7 +17,13 @@
   {
     packages.${system} = {
       gpt4all-chat = pkgs.qt6Packages.callPackage ./gpt4all-chat.nix { src=gpt4all; };
+      gpt4all-chat-avx = pkgs.qt6Packages.callPackage ./gpt4all-chat.nix { src=gpt4all; withAvx2 = false; };
       default = self.packages.${system}.gpt4all-chat;
+    };
+
+    apps.${system}.gpt4all-chat-avx = {
+      type = "app";
+      program = "${self.packages.${system}.gpt4all-chat-avx}/bin/chat";
     };
 
     apps.${system}.default = {
