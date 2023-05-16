@@ -21,14 +21,16 @@
       default = self.packages.${system}.gpt4all-chat;
     };
 
-    apps.${system}.gpt4all-chat-avx = {
-      type = "app";
-      program = "${self.packages.${system}.gpt4all-chat-avx}/bin/chat";
-    };
+    apps.${system} = {
+      gpt4all-chat-avx = {
+        type = "app";
+        program = "${self.packages.${system}.gpt4all-chat-avx}/bin/chat";
+      };
 
-    apps.${system}.default = {
-      type = "app";
-      program = "${self.packages.${system}.gpt4all-chat}/bin/chat";
+      default = {
+        type = "app";
+        program = "${self.packages.${system}.gpt4all-chat}/bin/chat";
+      };
     };
   };
 }
