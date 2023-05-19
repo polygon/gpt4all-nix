@@ -1,9 +1,7 @@
 { src 
 , lib
 , stdenv
-, fetchFromGitHub
 , cmake
-, qmake
 , qtquicktimeline
 , qtsvg
 , wrapQtAppsHook
