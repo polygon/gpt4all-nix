@@ -2,6 +2,7 @@
 , lib
 , stdenv
 , cmake
+, qtwayland
 , qtquicktimeline
 , qtsvg
 , wrapQtAppsHook
@@ -25,6 +26,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
+    qtwayland
     qtquicktimeline
     qtsvg
   ];
