@@ -1,9 +1,8 @@
 { src 
 , lib
 , stdenv
-, fetchFromGitHub
 , cmake
-, qmake
+, qtwayland
 , qtquicktimeline
 , qtsvg
 , wrapQtAppsHook
@@ -27,11 +26,12 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
+    qtwayland
     qtquicktimeline
     qtsvg
   ];
 
-  cmakeFlags = if withAvx2 then [] else [ "-DGPT4ALL_AVX_ONLY=ON" ];
+  cmakeFlags = lib.optionals withAvx2 [ "-DGPT4ALL_AVX_ONLY=ON" ];
 
   setSourceRoot = "sourceRoot=`pwd`/source/gpt4all-chat";
 
