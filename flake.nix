@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "GPT4ALL flake";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.gpt4all = {
