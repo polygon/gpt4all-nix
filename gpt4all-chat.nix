@@ -6,6 +6,7 @@
 , qtquicktimeline
 , qtsvg
 , qthttpserver
+, qtwebengine
 , wrapQtAppsHook
 , withAvx2 ? true
 }:
@@ -31,6 +32,7 @@ stdenv.mkDerivation {
     qtquicktimeline
     qtsvg
     qthttpserver
+    qtwebengine
   ];
 
   cmakeFlags = lib.optionals withAvx2 [ "-DGPT4ALL_AVX_ONLY=ON" ];
