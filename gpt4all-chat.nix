@@ -7,6 +7,7 @@
 , qtsvg
 , qthttpserver
 , qtwebengine
+, qt5compat
 , wrapQtAppsHook
 , withAvx2 ? true
 }:
@@ -33,6 +34,7 @@ stdenv.mkDerivation {
     qtsvg
     qthttpserver
     qtwebengine
+    qt5compat
   ];
 
   cmakeFlags = lib.optionals withAvx2 [ "-DGPT4ALL_AVX_ONLY=ON" ];
