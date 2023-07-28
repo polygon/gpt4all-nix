@@ -8,6 +8,7 @@
 , qthttpserver
 , qtwebengine
 , qt5compat
+, wayland
 , wrapQtAppsHook
 , withAvx2 ? true
 }:
@@ -35,6 +36,7 @@ stdenv.mkDerivation {
     qthttpserver
     qtwebengine
     qt5compat
+    wayland
   ];
 
   cmakeFlags = lib.optionals withAvx2 [ "-DGPT4ALL_AVX_ONLY=ON" ];
