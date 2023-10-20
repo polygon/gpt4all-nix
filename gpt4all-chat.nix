@@ -27,10 +27,6 @@ stdenv.mkDerivation {
       --replace 'set(CMAKE_INSTALL_PREFIX ''${CMAKE_BINARY_DIR}/install)' ""
   '';
 
-  postInstall = ''
-    cp bin/libkp_logger.so $out/lib
-  '';
-
   nativeBuildInputs = [
     wrapQtAppsHook
     cmake

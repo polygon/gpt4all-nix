@@ -3,11 +3,11 @@
     "gpt4all": {
       "flake": false,
       "locked": {
-        "lastModified": 1697137027,
-        "narHash": "sha256-Rza7ClYzq1qDaweMhIYyw/w2QNoxCFJcA7iL52psQOM=",
+        "lastModified": 1697757063,
+        "narHash": "sha256-CN3ZQx9gK9XqNmjcZDoixE516Wa1/aWUXWe8dAPGRvA=",
         "ref": "refs/heads/main",
-        "rev": "10f9b49313d01d53006b3d7c78608da8e3c62257",
-        "revCount": 1478,
+        "rev": "d50803ff8e5f48f6550605efc77facacd555e6c4",
+        "revCount": 1492,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/nomic-ai/gpt4all"
@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1696879762,
-        "narHash": "sha256-Ud6bH4DMcYHUDKavNMxAhcIpDGgHMyL/yaDEAVSImQY=",
+        "lastModified": 1697456312,
+        "narHash": "sha256-roiSnrqb5r+ehnKCauPLugoU8S36KgmWraHgRqVYndo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f99e5f03cc0aa231ab5950a15ed02afec45ed51a",
+        "rev": "ca012a02bf8327be9e488546faecae5e05d7d749",
         "type": "github"
       },
       "original": {
