@@ -13,14 +13,15 @@
 , vulkan-headers
 , wayland
 , wrapQtAppsHook
+, version ? "nightly"
 , withAvx2 ? true
 }:
 
 stdenv.mkDerivation {
   pname = "gpt4all-chat";
-  version = "nightly";
 
   inherit src;
+  inherit version;
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \
