@@ -16,9 +16,9 @@
   in
   {
     packages.${system} = {
-      gpt4all-chat-2_5_4 = 
+      gpt4all-chat-2_6_2 = 
       let
-        version = "2.5.4";
+        version = "2.6.2";
       in
       pkgs.qt6Packages.callPackage ./gpt4all-chat.nix {
         src = pkgs.fetchFromGitHub {
@@ -26,15 +26,15 @@
           repo = "gpt4all";
           rev = "v${version}";
           fetchSubmodules = true;
-          sha256 = "sha256-JZ8O9a0XRwRR81b+A97sWOtiL0M12cqLh9eoE+VkDVg=";
+          sha256 = "sha256-BQE4UQEOOUAh0uGwQf7Q9D30s+aoGFyyMH6EI/WVIkc=";
         };
         inherit version;
       };
-      gpt4all-chat-avx-2_5_4 = self.packages.${system}.gpt4all-chat-2_5_4.override { withAvx2 = false; };
+      gpt4all-chat-avx-2_6_2 = self.packages.${system}.gpt4all-chat-2_6_2.override { withAvx2 = false; };
       gpt4all-chat-nightly = pkgs.qt6Packages.callPackage ./gpt4all-chat.nix { src=gpt4all; };
       gpt4all-chat-avx-nightly = self.packages.${system}.gpt4all-chat-nightly.override { withAvx2 = false; };
-      gpt4all-chat = self.packages.${system}.gpt4all-chat-2_5_4;
-      gpt4all-chat-avx = self.packages.${system}.gpt4all-chat-avx-2_5_4;
+      gpt4all-chat = self.packages.${system}.gpt4all-chat-2_6_2;
+      gpt4all-chat-avx = self.packages.${system}.gpt4all-chat-avx-2_6_2;
       default = self.packages.${system}.gpt4all-chat;
     };
 
