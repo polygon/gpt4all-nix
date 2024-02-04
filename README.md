@@ -1,3 +1,5 @@
+# This project is deprecated, use `gpt4all-chat` from nixpkgs
+
 # gpt4all-nix
 
 A Nix flake for gpt4all chat client: https://github.com/nomic-ai/gpt4all
